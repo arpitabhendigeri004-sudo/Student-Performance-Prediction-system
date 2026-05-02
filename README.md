@@ -1,36 +1,143 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎓 Student Performance Prediction System
 
-## Getting Started
+An AI-powered web application that predicts student performance using Machine Learning, built with **FastAPI (backend)** and **Next.js (frontend dashboard)**.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+* 📊 Predict student performance (Pass/Fail)
+* 🎯 Probability score for prediction
+* ⚡ FastAPI-based ML backend
+* 💻 Interactive Next.js dashboard
+* 🔗 Real-time API integration
+* 📈 Clean UI with result insights
+
+---
+
+## 🛠️ Tech Stack
+
+### 🔹 Backend
+
+* Python
+* FastAPI
+* Scikit-learn
+* Pandas
+* NumPy
+
+### 🔹 Frontend
+
+* Next.js
+* React
+* TypeScript
+
+---
+
+## 📂 Project Structure
+
+```
+Student-Performance-Prediction/
+│
+├── serving/                # FastAPI backend
+│   └── app.py
+│
+├── src/                    # ML pipeline & training
+│   ├── pipeline.py
+│   └── train.py
+│
+├── student-dashboard/      # Next.js frontend
+│   └── app/
+│       └── page.tsx
+│
+├── requirements.txt
+└── README.md
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Installation & Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 🔹 1. Clone Repository
 
-## Learn More
+```
+git clone https://github.com/your-username/student-performance-prediction.git
+cd student-performance-prediction
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🔹 2. Backend Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+cd serving
+pip install -r ../requirements.txt
+uvicorn app:app --reload
+```
 
-## Deploy on Vercel
+👉 Backend runs at:
+`http://127.0.0.1:8000`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔹 3. Frontend Setup
+
+```
+cd student-dashboard
+npm install
+npm run dev
+```
+
+👉 Frontend runs at:
+`http://localhost:3000`
+
+---
+
+## 🔗 API Endpoint
+
+### POST `/predict`
+
+**Request:**
+
+```json
+{
+  "age": 20,
+  "studytime": 2
+}
+```
+
+**Response:**
+
+```json
+{
+  "prediction": 1,
+  "probability": 0.9985,
+  "status": "Pass"
+}
+```
+
+---
+
+## 📸 Screenshots
+
+*Add your project screenshots here*
+
+---
+
+## 🎯 Future Improvements
+
+* 📊 Add data visualization charts
+* 👨‍🎓 Support bulk student prediction
+* ☁️ Deploy on cloud (Vercel + Render)
+* 🔐 Add authentication system
+
+---
+
+## 👩‍💻 Author
+
+**Arpita Bhendigeri**
+
+---
+
+## ⭐ Show Your Support
+
+If you like this project, give it a ⭐ on GitHub!
